@@ -84,7 +84,7 @@ int main(int argc, const char * argv[]) {
     }
     
     char cp_cmd[strlen(orig_path)+strlen(output_path)+30];
-    sprintf(cp_cmd,"cp %s %s",orig_path,output_path);
+    sprintf(cp_cmd,"cp \"%s\" \"%s\"",orig_path,output_path);
     system(cp_cmd);
     
     if(check_file_exist(output_path))do{
