@@ -1,13 +1,15 @@
 # iosdumpkernelfix
 This tool will help to fix the Mach-O header of iOS kernel which dump from the memory. So that IDA or function symbol-related tools can loaded function symbols of ios kernel correctly
 
-[![Contact](https://img.shields.io/badge/contact-@cocoahuke-fbb52b.svg?style=flat)](https://twitter.com/cocoahuke) [![build](https://travis-ci.org/cocoahuke/iosdumpkernelfix.svg?branch=master)](https://travis-ci.org/cocoahuke/ioskextdump) [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/cocoahuke/iosdumpkernelfix/blob/master/LICENSE) [![paypal](https://img.shields.io/badge/Donate-PayPal-039ce0.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=EQDXSYW8Z23UY)
+[![Contact](https://img.shields.io/badge/contact-@cocoahuke-fbb52b.svg?style=flat)](https://twitter.com/cocoahuke) [![build](https://travis-ci.org/cocoahuke/iosdumpkernelfix.svg?branch=master)](https://travis-ci.org/cocoahuke/iosdumpkernelfix) [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/cocoahuke/iosdumpkernelfix/blob/master/LICENSE) [![paypal](https://img.shields.io/badge/Donate-PayPal-039ce0.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=EQDXSYW8Z23UY)
 
 For ARM 32/64 bit iOS kernel, this tool  will correct fileoff of segment and section, retrieve the location of the symbol table
 
 Although the function symbols in the iOS kernel have been removed a lot, but the IOKit interface function name is still there, and relatively complete
 
 IOKit function symbols are used to create connection between Kexts that are loaded from the userland and IOKit interface in the kernel (KPI), The embedded kernel extension in iOS does not need this, though.
+
+Tested in iOS8&iOS9 kernel cache, support 32/64 bit iOS kernel
 
 # How to use
 
